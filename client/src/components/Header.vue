@@ -1,25 +1,33 @@
 <template>
   <v-toolbar fixed class="light-green darken-2">
     <v-toolbar-title class="mr-4">
+
       <router-link
         class="home"
         tag="span"
         :to="{ name: 'home' }">
         Eddie Franco
       </router-link>
+
     </v-toolbar-title>
     <v-toolbar-items>
-      <!-- TODO add portfolio -->
-      <v-btn flat dark>
+
+      <v-btn flat dark
+      :to="{ name: 'portfolio' }">
         Portfolio
       </v-btn>
-      <!-- TODO add contact -->
-      <v-btn flat dark>
+
+      <v-btn flat dark
+      :to="{ name: 'contact' }">
         Contact
       </v-btn>
+
     </v-toolbar-items>
+
     <v-spacer></v-spacer>
+
     <v-toolbar-items>
+
       <v-btn flat dark
         v-if="!$store.state.isUserLoggedIn"
         :to="{ name: 'register' }">
@@ -37,6 +45,7 @@
         @click="logout">
         Logout
       </v-btn>
+      
     </v-toolbar-items>
   </v-toolbar>
 </template>
