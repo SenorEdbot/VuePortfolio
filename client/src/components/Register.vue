@@ -1,8 +1,13 @@
 <template>
-  <div>
-    <h1>Register</h1>
-    <form
-          name="vue-portfolio-form"
+  <v-layout>
+    <v-flex xs6 offset-xs3>
+      <div class="white elevation-2">
+        <v-toolbar flat dense class="light-green darken-2" dark>
+          <v-toolbar-title>Register</v-toolbar-title>
+        </v-toolbar>
+        <div class="pl-4 pr-4 pt-2 pb-2">
+          <form
+          name="song-tracker-form"
           autocomplete="off">
           <v-text-field
             type="email"
@@ -21,7 +26,10 @@
           class="light-green darken-2"
           dark
           @click="register">Register</v-btn>
-  </div>
+        </div>
+      </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -41,7 +49,11 @@ export default {
           email: this.email,
           password: this.password
         })
-        console.log(response)
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({
+          name: 'home'
+        })
       } catch (error) {
         this.error = error.response.data.error
       }

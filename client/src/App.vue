@@ -4,7 +4,7 @@
       <page-header />
       <main>
         <v-container fluid>
-          <router-view/>
+          <router-view />
         </v-container>
       </main>
     </v-app>
@@ -29,5 +29,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.danger-alert {
+  color: red;
 }
 </style>
