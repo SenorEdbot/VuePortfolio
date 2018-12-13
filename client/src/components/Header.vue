@@ -45,7 +45,7 @@
         @click="logout">
         Logout
       </v-btn>
-      
+
     </v-toolbar-items>
   </v-toolbar>
 </template>
