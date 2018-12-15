@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Portfolio from '@/components/Portfolio'
+import Portfolio from '@/components/Portfolio/Portfolio'
 import Contact from '@/components/Contact'
 
 Vue.use(Router)
